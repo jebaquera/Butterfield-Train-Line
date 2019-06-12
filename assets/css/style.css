@@ -6,17 +6,26 @@ body {
 h4 {
     font-variant: small-caps;
     font-weight: bold;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 32px;
+    font-family: Jomhuria, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 42px;
     color: chocolate;
-    letter-spacing: .10em;
+    letter-spacing: .05em;
 }
 .jumbotron {
 /*    background-color: chocolate;
     color: floralwhite; 
     background-image: url("../images/valley-2300707_1280.jpg"); */
     background-image: url("../images/rail-sonoran_2434248a.jpg");
-    background-size: 100%
+    background-size: 100%;
+    font-family: 'Jomhuria', sans-serif;
+    font-size: 600%;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.10em;
+    color: white;
+    text-shadow: 3px 3px black;
 }
 
 .container {
@@ -25,11 +34,6 @@ h4 {
     padding: 30px;
 }
 
-.display-4 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 32px;
-    text-align: center;
-}
 
 .thead-dark {
     height: 20px;

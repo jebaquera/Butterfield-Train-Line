@@ -17,6 +17,7 @@
     
     </head>
     <body>
+        <!-- Jumbotron title-->
         <div class="jumbotron">
             <div class="row">
                 <div class="col-sm-12">
@@ -26,73 +27,54 @@
         </div>
 
         <div class="container">
-        <div>
-            <h4>Current Train Schedule</h4>
-            <table class="table table-sm table-striped">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Train Name</th>
-                        <th scope="col">Destination</th>
-                        <th scope="col">Frequency (min)</th>
-                        <th scope="col">Next Arrival</th>
-                        <th scope="col">Minutes Away</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Eagle</th>
-                        <td>Ft. Davis, TX</td>
-                        <td>6000</td>
-                        <td>07:00 pm</td>
-                        <td>5301</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cortez Express</th>
-                        <td>Cortez, NM</td>
-                        <td>4000</td>
-                        <td>11:00 am</td>
-                        <td>1000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Seminole</th>
-                        <td>New Orleans, LA</td>
-                        <td>240</td>
-                        <td>11:25 pm</td>
-                        <td>200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <hr />
-        <div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h4>Add Your Train</h4>
-                    <form>
-                        <div class="form-group">
-                            <label for="formGroupExampleInput">Train Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Add a train name">
-                        </div>
+            <div>
+                <h4>Current Train Schedule</h4>
+                <table class="table table-sm table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-display">
+                    </tbody>
+                </table>
+            </div>
 
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Destination</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a destination">
-                        </div>
+            <hr />
 
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a train time in the format shown">
-                        </div>
+            <div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Add Your Train</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Train Name</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Add a train name">
+                            </div>
 
-                        <div class="form-group">
-                            <label for="formGroupExampleInput2">Frequency (min)</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a frequency">
-                        </div>
-                    </form>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Destination</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a destination">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a train time in the format shown">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Frequency (min)</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a frequency">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         
     
