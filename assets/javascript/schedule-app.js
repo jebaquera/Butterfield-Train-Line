@@ -5,13 +5,15 @@
 // Initialize Firebase
 // Make sure that your configuration matches your firebase script version
 // (Ex. 3.0 != 3.7.1)
-//var config = {
-//    apiKey: "AIzaSyB4Ws5gPo9gNW9x90uXnX6XZ4uqE5QjkUY",
-//    authDomain: "countdownclicker.firebaseapp.com",
-//    databaseURL: "https://countdownclicker.firebaseio.com",
-//    storageBucket: "countdownclicker.appspot.com",
-//    messagingSenderId: "435604262542"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyB3gWMuYCHhH_Ii9Byd8Lis9sykOfcnWx0",
+  authDomain: "jb-project-69b43.firebaseapp.com",
+  databaseURL: "https://jb-project-69b43.firebaseio.com",
+  projectId: "jb-project-69b43",
+  storageBucket: "jb-project-69b43.appspot.com",
+  messagingSenderId: "488851290408",
+  appId: "1:488851290408:web:72d3874814d47b8f"
+};
   
   firebase.initializeApp(config);
   
