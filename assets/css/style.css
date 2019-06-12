@@ -12,8 +12,11 @@ h4 {
     letter-spacing: .10em;
 }
 .jumbotron {
-    background-color: chocolate;
-    color: floralwhite;
+/*    background-color: chocolate;
+    color: floralwhite; 
+    background-image: url("../images/valley-2300707_1280.jpg"); */
+    background-image: url("../images/rail-sonoran_2434248a.jpg");
+    background-size: 100%
 }
 
 .container {
