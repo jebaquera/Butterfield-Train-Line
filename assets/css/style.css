@@ -1,4 +1,42 @@
 body {
-    background-color: honeydew;
+    background-color: white;
     margin: 0;
 }
+
+h4 {
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+    color: chocolate;
+    letter-spacing: .10em;
+}
+.jumbotron {
+    background-color: chocolate;
+    color: floralwhite;
+}
+
+.container {
+    width: 70%;
+    background-color: blanchedalmond;
+    padding: 30px;
+}
+
+.display-4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.thead-dark {
+    height: 20px;
+    background-color: darkslategray;
+    color: white;
+}
+
+
+/*
+hr {
+    color: black;
+} 
+*/

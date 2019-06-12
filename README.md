@@ -14,6 +14,6 @@ When adding trains, administrators should be able to submit the following:
 <br /><br /> 
 Code this app to calculate when the next train will arrive; this should be relative to the current time.
 <br /><br />  
-Users from many different machines must be able to view same train times.
+Users from many different machines must be able to view the same train times.
 <br />
 <hr />
