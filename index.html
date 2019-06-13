@@ -40,6 +40,13 @@
                         </tr>
                     </thead>
                     <tbody id="all-display">
+                        <tr>
+                            <td id="name-display" scope="col"></td>
+                            <td id="destination-display" scope="col"></td>
+                            <td id="frequency-display" scope="col"></td>
+                            <td id="nextArrival-display" scope="col"></td>
+                            <td id="minutesAway-display" scope="col"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -53,38 +60,40 @@
                         <form>
                             <div class="form-group">
                                 <label for="formGroupExampleInput">Train Name</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Add a train name">
+                                <input type="text" class="form-control" id="name" placeholder="Add a train name">
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Destination</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a destination">
+                                <input type="text" class="form-control" id="destination" placeholder="Add a destination">
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">First Train Time (HH:mm - military time)</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a train time in the format shown">
+                                <input type="text" class="form-control" id="firstTrain" placeholder="Add a train time in the format shown">
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Frequency (min)</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Add a frequency">
+                                <input type="text" class="form-control" id="frequency" placeholder="Add a frequency">
                             </div>
                         </form>
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button type="button" id="addTrainButton" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
         
     
-        <!-- Firebase Core JavaScript Link -->
+        <!-- Firebase Core JavaScript link -->
         <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
-        <!-- Specific Firebase products we want -->
+        <!-- Specific Firebase products link -->
         <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
-        <!-- jQuery -->
+        <!-- jQuery link -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Script -->
+        <!-- Moment.js link -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <!--JavaScript -->
         <script type="text/javascript" src="./assets/javascript/schedule-app.js"></script>    
     </body>
 </html>

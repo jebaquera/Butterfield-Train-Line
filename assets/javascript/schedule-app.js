@@ -1,10 +1,9 @@
 // add Document complete here
+$( document ).ready(function() {
+  console.log( "ready!" );
+});
+// Global firebase //
 
-/* global firebase */
-
-// Initialize Firebase
-// Make sure that your configuration matches your firebase script version
-// (Ex. 3.0 != 3.7.1)
 const firebaseConfig = {
   apiKey: "AIzaSyB3gWMuYCHhH_Ii9Byd8Lis9sykOfcnWx0",
   authDomain: "jb-project-69b43.firebaseapp.com",
@@ -14,85 +13,81 @@ const firebaseConfig = {
   messagingSenderId: "488851290408",
   appId: "1:488851290408:web:72d3874814d47b8f"
 };
+ // Initialize Firebase 
+ firebase.initializeApp(firebaseConfig);
+
+// Variable to reference the database
+var database = firebase.database();
+
+// Initial Train variables
+var name = "";
+var destination = "";
+var firstTrain = "";
+var frequency = "";
+
+var nextArrival = "";
+var minutesAway = "";
+
+// Capture Submit button click event
+$("#addTrainButton").on("click", function(event) {
+  event.preventDefault();
   
-  firebase.initializeApp(config);
-  
-  // Create a variable to reference the database
-  var database = firebase.database();
-  
-  // Use the below initialValue
-  var initialValue = 100;
-  
-  // Use the below variable clickCounter to keep track of the clicks.
-  var clickCounter = initialValue;
-  
-  // --------------------------------------------------------------
-  
-  // At the initial load and on subsequent data value changes, get a snapshot of the current data. (I.E FIREBASE HERE)
-  // This callback keeps the page updated when a value changes in firebase.
-  database.ref().on("value", function(snapshot) {
-    // We are now inside our .on function...
-  
-    // Console.log the "snapshot" value (a point-in-time representation of the database)
-    console.log(snapshot.val());
-    // This "snapshot" allows the page to get the most current values in firebase.
-  
-    // Change the value of our clickCounter to match the value in the database
-    clickCounter = snapshot.val().clickCount;
-  
-    // Console Log the value of the clickCounter
-    console.log(clickCounter);
-  
-    // Change the HTML using jQuery to reflect the updated clickCounter value
-    $("#click-value").text(clickCounter);
-    // Alternate solution to the above line
-    // $("#click-value").html(clickCounter);
-  
-  // If any errors are experienced, log them to console.
-  }, function(errorObject) {
-    console.log("The read failed: " + errorObject.code);
-  });
-  
-  // --------------------------------------------------------------
-  
-  // Whenever a user clicks the click button
-  $("#click-button").on("click", function() {
-  
-    // Reduce the clickCounter by 1
-    clickCounter--;
-  
-    // Alert User and reset the counter
-    if (clickCounter === 0) {
-      alert("Phew! You made it! That sure was a lot of clicking.");
-      clickCounter = initialValue;
-    }
-  
-    // Save new value to Firebase
-    database.ref().set({
-      clickCount: clickCounter
-    });
-  
-    // Log the value of clickCounter
-    console.log(clickCounter);
-  
-  });
-  
-  // Whenever a user clicks the restart button
-  $("#restart-button").on("click", function() {
-  
-    // Set the clickCounter back to initialValue
-    clickCounter = initialValue;
-  
-    // Save new value to Firebase
-    database.ref().set({
-      clickCount: clickCounter
-    });
-  
-    // Log the value of clickCounter
-    console.log(clickCounter);
-  
-    // Change the HTML Values
-    $("#click-value").text(clickCounter);
-  
-  });
-  
+// Grabbed values from text boxes
+name = $("#name").val().trim();
+destination = $("#destination").val().trim();
+firstTrain = $("#firstTrain").val().trim();
+frequency = $("#frequency").val().trim();
+
+// Code for handling the push
+database.ref().push({
+  name: name,
+  destination: destination,
+  firstTrain: firstTrain,
+  frequency: frequency,
+  dateAdded: firebase.database.ServerValue.TIMESTAMP
+});
+
+});
+
+// Firebase watcher .on("child_added",
+database.ref().on("child_added", function(snapshot) {
+  // storing the snapshot.val() in a variable for convenience
+  var sv = snapshot.val();
+
+  // Console.loging the last user's data
+  console.log(sv.name);
+  console.log(sv.destination);
+  console.log(sv.firstTrain);
+  console.log(sv.frequency);
+
+  // Change the HTML to reflect
+  $("#name-display").text(sv.name);
+  $("#destination-display").text(sv.destination);
+  $("#firstTrain-display").text(sv.firstTrain);
+  $("#frequency-display").text(sv.frequency);
+
+  // Handle the errors
+}, function(errorObject) {
+  console.log("Errors handled: " + errorObject.code);
+});
+
+
+// Variables for date calculations
+// var randomDate = "02/23/1999";
+// var randomFormat = "MM/DD/YYYY";
+// var convertedDate = moment(randomDate, randomFormat);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
