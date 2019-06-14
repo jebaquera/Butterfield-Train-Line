@@ -14,21 +14,13 @@
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
         <!-- Google Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Jomhuria&display=swap" rel="stylesheet">
-    
+        <!-- Added Moment JS -->
+          <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
     </head>
     <body>
-        <!-- Jumbotron title-->
-        <!-- <div class="jumbotron jumbotron-fluid">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="display-4">Butterfield Train Line</h1>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Image and text -->
+        <!-- Masthead with Train Line name -->
         <nav class="navbar navbar-light bg-light">
-            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
             <h1 class="display-4">Butterfield Train Line</h1>
         </nav>
 
@@ -45,7 +37,7 @@
                                 <th scope="col">Train Name</th>
                                 <th scope="col">Destination</th>
                                 <th scope="col">Frequency (min)</th>
-                                <th id="nextArival" scope="col">Next Arrival</th>
+                                <th id="nextArrival" scope="col">Next Arrival</th>
                                 <th id="minutesAway" scope="col">Minutes Away</th>
                             </tr>
                         </thead>
@@ -58,7 +50,7 @@
                         <h2 id="addTrain">Add Your Train</h2>
                         <form>
                             <div class="form-group">
-                                <label for="formGroupExampleInput">Train Name</label>
+                                <label>Train Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Add a train name">
                             </div>
 
@@ -81,8 +73,7 @@
                 </div>
             </div>
         </div>
-        
-    
+          
         <!-- Firebase Core JavaScript link -->
         <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
         <!-- Specific Firebase products link -->
@@ -92,6 +83,7 @@
         <!-- Moment.js link -->
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         <!--JavaScript -->
-        <script type="text/javascript" src="./assets/javascript/schedule-app.js"></script>    
+        <script type="text/javascript" src="./assets/javascript/schedule-app.js"></script> 
+           
     </body>
 </html>
