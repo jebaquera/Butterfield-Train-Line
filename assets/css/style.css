@@ -28,15 +28,16 @@ th {
 }
 
 
-.jumbotron-fluid {
+nav {
+    height: 100px;
     background-color: rgb(206, 115, 4);
-    font-family: 'Jomhuria', sans-serif;
-    font-size: 600%;
-    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 130px;
+    font-weight: bolder;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    word-spacing: 0.10em;
+    word-spacing: 0.05em;
     color: black;
     text-shadow: 2px 2px white;
 }

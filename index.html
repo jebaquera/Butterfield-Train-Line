@@ -18,13 +18,19 @@
     </head>
     <body>
         <!-- Jumbotron title-->
-        <div class="jumbotron jumbotron-fluid">
+        <!-- <div class="jumbotron jumbotron-fluid">
             <div class="row">
                 <div class="col-sm-12">
                     <h1 class="display-4">Butterfield Train Line</h1>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+            <h1 class="display-4">Butterfield Train Line</h1>
+        </nav>
 
         <div class="container">
             <div class="row">
@@ -33,24 +39,17 @@
                     <h2>Current Train Schedule</h2>
                     <p>Don&rsquo;t see your train in the current schedule? You can add it by entering the information in the form to the right and clicking the Submit button.</p>
                         <br />
-                    <table class="table table-sm table-striped">
+                    <table id="train-table" class="table table-sm table-striped">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Train Name</th>
                                 <th scope="col">Destination</th>
                                 <th scope="col">Frequency (min)</th>
-                                <th scope="col">Next Arrival</th>
-                                <th scope="col">Minutes Away</th>
+                                <th id="nextArival" scope="col">Next Arrival</th>
+                                <th id="minutesAway" scope="col">Minutes Away</th>
                             </tr>
                         </thead>
                         <tbody id="all-display">
-                            <tr>
-                                <td id="name-display" scope="col"></td>
-                                <td id="destination-display" scope="col"></td>
-                                <td id="frequency-display" scope="col"></td>
-                                <td id="nextArrival-display" scope="col"></td>
-                                <td id="minutesAway-display" scope="col"></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
